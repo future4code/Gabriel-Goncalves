@@ -99,9 +99,12 @@ let melancia = {
     disponibilidade: true
 }
 
-function compras(maca) {
-    carrinho.push(maca)
+function compras(objeto) {
+    carrinho.push(objeto)
 }
 
-console.log(compras(maca))
+compras(maca)
+compras(pera)
+compras(melancia)
 
+console.log(carrinho)
