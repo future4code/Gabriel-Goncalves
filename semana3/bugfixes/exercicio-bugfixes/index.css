@@ -138,3 +138,8 @@ table {
     text-align: center;
     width: 100%;
 }
+
+.imagem {
+    height: 70px;
+    width: 70px;
+}
