@@ -158,3 +158,10 @@ table {
     height: 70px;
     width: 70px;
 }
+
+input {
+    border-top: 0;
+    border-bottom: 3;
+    border-left: 0;
+    border-right: 0;
+}
