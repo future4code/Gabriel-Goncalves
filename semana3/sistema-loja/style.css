@@ -1,0 +1,44 @@
+.cabecalho {
+    text-align: center;
+}
+
+.navBar {
+    background-color: black;
+    padding: 15px 10px 15px 10px;
+}
+
+.navBar a {
+    text-decoration: none;
+    color: blanchedalmond;
+    margin: 0 5% 0 0;
+    background-color: black;
+}
+
+.navBar a:hover {
+    background-color: whitesmoke;
+    color: black;
+    padding: 10px 10px;
+}
+
+.corpo {
+    background-color: wheat;
+    height: 400px;
+}
+   
+.rodape {
+    background-color: gold;
+    height: 40px;
+    text-align: center;
+}
+
+.redesSociais {
+    height: 20px;
+    background-color: silver;
+}
+
+.redesSociais img {
+    height: 20px;
+    width: 20px;
+    margin-left: 5%;
+    margin-right: 5%;
+}
