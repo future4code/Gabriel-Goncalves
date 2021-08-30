@@ -60,6 +60,7 @@ table {
 .fone {
     text-align: center;
     font-family: Times 'Times New Roman', Times, serif;
+    font-size: 40px;
     background-color: cornsilk;
     padding: 20px 0;
     margin-top: 10px;
@@ -78,6 +79,7 @@ table {
 .rSociais p {
     margin: 15px 0;
     display: inline;
+    font-size: 30px;
 }
 
 .rSociais img {
@@ -121,10 +123,6 @@ table {
     text-align: center;
 }
 
-.conheca {
-    text-align: center;
-}
-
 .conheca button {
     border-radius: 50px;
     border: 5px solid whitesmoke;
@@ -132,9 +130,14 @@ table {
     color:whitesmoke;
     padding: 20px 40px 20px 40px;
     font-size: 20px;
-    display: block;
 }
 
 .conheca a {
     text-decoration: none;
+}
+
+.form {
+    background-color: whitesmoke;
+    text-align: center;
+    font-family: Arial;
 }
