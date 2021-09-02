@@ -1,0 +1,143 @@
+.navBar{
+    background-color: silver;
+    padding: 15px 10px 15px 10px;
+}
+
+.navBar a {
+    text-decoration: none;
+    background-color: silver;
+    padding: 10px 10px;
+    color: black;
+}
+
+.navBar a:hover {
+    background-color: gray;
+    color: gold;
+}
+
+.eu {
+    text-align: center;
+    background-color: cornsilk;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+}
+
+.tabela {
+    background-color: whitesmoke;
+    font-family: Arial;
+    font-size: 40px;
+    padding: 40px 0;
+}
+
+table {
+    width: 100%;
+    text-align: center;
+}
+
+.apresentacao {
+    font-family: Arial;
+    padding: 0 20px 5px 20px;
+    background-color: cornsilk;
+}
+
+.apresentacao h1 {
+    text-align: center;
+    font-family: fantasy;
+}
+
+.habilidades {
+    font-family: Arial;
+    padding: 0 10px 5px 10px;
+    background-color: cornsilk;
+}
+
+.habilidades h2 {
+    text-align: center;
+    font-family: fantasy;
+    font-size: 30px;
+}
+
+.fone {
+    text-align: center;
+    font-family: Times 'Times New Roman', Times, serif;
+    font-size: 40px;
+    background-color: cornsilk;
+    padding: 20px 0;
+    margin-top: 10px;
+}
+
+.fone img {
+    height: 40px;
+    width: 40px;
+}
+
+.rSociais {
+    background-color: cornsilk;
+    padding: 0 20px 5px 20px;
+}
+
+.rSociais p {
+    margin: 15px 0;
+    display: inline;
+    font-size: 30px;
+}
+
+.rSociais img {
+    height: 40px;
+    width: 80px;
+}
+
+.rSociais a {
+    text-decoration: none;
+    color: blue;
+}
+
+.rSociais a:active {
+    color: goldenrod;
+}
+
+#face {
+    height: 40px;
+    width: 40px;
+    margin-left: 20px;
+}
+
+.mail {
+    background-color: cornsilk;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.mail button {
+    border-radius: 50px;
+    border: 5px solid whitesmoke;
+    background-color: black;
+    color:whitesmoke;
+    padding: 20px 40px 20px 40px;
+    font-size: 20px;
+}
+
+.projetos {
+    background-color: cornsilk;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.conheca button {
+    border-radius: 50px;
+    border: 5px solid whitesmoke;
+    background-color: black;
+    color:whitesmoke;
+    padding: 20px 40px 20px 40px;
+    font-size: 20px;
+}
+
+.conheca a {
+    text-decoration: none;
+}
+
+.form {
+    background-color: whitesmoke;
+    text-align: center;
+    font-family: Arial;
+}
