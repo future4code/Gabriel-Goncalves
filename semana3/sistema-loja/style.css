@@ -24,6 +24,14 @@
     background-color: wheat;
     height: 400px;
 }
+
+.estoque {
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; */
+    height: 7000px;
+}
    
 .rodape {
     background-color: gold;
@@ -42,3 +50,4 @@
     margin-left: 5%;
     margin-right: 5%;
 }
+
