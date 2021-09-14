@@ -7,17 +7,33 @@ import React from 'react';
 
 class App extends React.Component {
   state = {
-    etapaUmConcluida: false,
-    etapaDoisConcluida: false,
-    etapaTresConcluida: false
+    etapa: 1
   }
+
+  renderizaEtapa = () => {
+    switch (this.state.etapa) {
+      case 1:
+        return <DadosGerais/>;
+      case 2:
+        return <Educacionais/>;
+      case 3: 
+        return <Gerais/>;
+      case 4:
+        return <Fim/>;
+      default:
+        return <Fim/>
+    }
+  }
+
+  pulaEtapa =() => {
+    this.setState({etapa: this.state.etapa + 1})
+  }
+
   render (){
     return (
       <div className="App">
-        <DadosGerais/>
-        <Educacionais/>
-        <Gerais/>
-        <Fim/>
+        {this.renderizaEtapa()}
+        <button onClick={this.pulaEtapa}>Próxima Etapa</button>
       </div>
     )
   }

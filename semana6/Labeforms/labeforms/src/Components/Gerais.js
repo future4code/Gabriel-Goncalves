@@ -12,7 +12,7 @@ class Gerais extends React.Component {
                 <option value='Curso Técnico'>Curso Técnico</option>
                 <option value='Curso de Inglês'>Curso de Inglês</option>
             </select> <br/>
-            <button>Próxima Etapa</button>
+            {/* <button>Próxima Etapa</button> */}
         </div>
     }
 }

@@ -8,7 +8,7 @@ class Educacionais extends React.Component {
                     <input type="text" id="curso"/> <br/>
                     <label for='unidade'>6. Qual unidade de ensino</label> <br/>
                     <input type='text' id='unidade'/> <br/>
-                    <button>Próxima Etapa</button>
+                    {/* <button>Próxima Etapa</button> */}
                 </div>
     }
 }
