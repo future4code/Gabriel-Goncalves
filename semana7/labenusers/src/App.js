@@ -1,19 +1,51 @@
 import React from 'react';
-import axios from 'axios';
-
-
-const headers = {
-  headers: {
-    Authorization: "gabriel-goncalves-maryam"
-  }
-};
+import ListaUsuarios from './ListaUsuarios'
+import Cadastro from "./Cadastro"
 
 class App extends React.Component {
 
   state = {
+    tela: 'cadastro'
+  }
+
+  exibeTela = () => {
+    switch (this.state.tela) {
+      case 'cadastro':
+        return <Cadastro exibeListaUsuarios={this.exibeListaUsuarios}/>
+      
+      case 'listaUsuarios':
+        return <ListaUsuarios exibeCadastro={this.exibeCadastro} />
+
+      default: 
+        return <div>ERRO! Página não encontrada.</div>
+    }
+  }
+
+  exibeListaUsuarios = () => {
+    this.setState({tela: 'listaUsuarios'})
+  }
+
+  exibeCadastro = () => {
+    this.setState({tela: 'cadastro'})
+  }
+
+  render () {
+    return (
+      <div>
+        {this.exibeTela()}
+      </div>
+    )
+  }
+}
+
+export default App
+
+
+/* class App extends React.Component {
+
+  state = {
     usuarios: [
       {
-        id: 0,
         name: "",
         email: ""
       }
@@ -26,7 +58,6 @@ adicionaUsuario = () => {
   const url = "https://us-central1-labenu-apis.cloudfunctions.net/labenusers/users"
 
   const body = {
-    id: Date.now(),
     name: this.state.inputNome,
     email: this.state.inputEmail
   }
@@ -95,4 +126,4 @@ adicionaUsuario = () => {
   }
 }
 
-export default App;
+export default App; */
