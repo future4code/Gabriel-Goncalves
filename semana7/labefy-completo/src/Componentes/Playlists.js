@@ -7,11 +7,10 @@ class Playlists extends React.Component {
     state = {
         playlists: [],
         detalhes: 'false',
-        id: ""
     }
 
     componentDidMount () {
-        {this.mostraPlaylists()}
+        this.mostraPlaylists()
     }
 
     exibeDetalhes = () => {
@@ -20,7 +19,6 @@ class Playlists extends React.Component {
         } else {
             this.setState({detalhes: 'false'})
         }
-        console.log(this.state.detalhes)
     }
 
     mostraPlaylists = () => {
@@ -33,18 +31,13 @@ class Playlists extends React.Component {
         axios.get(url, headers)
         .then((response) => {
             this.setState({playlists: response.data.result.list})
-            console.log(this.state)
         })
         .catch((erro) => {
-            console.log(erro)
+            alert(erro)
         })
     }
 
     render () {
-
-        const pegaId = this.state.playlists.map((lista) => {
-            return 
-        })
 
         const listaParaRenderizar = this.state.playlists.map((lista) => {
             return <div  key={lista.id}>

@@ -7,8 +7,8 @@ class Detalhes extends React.Component {
         detalhesDasListas: []
     }
 
-    pegaDetalhes = () => {
-        const url = ""
+    pegaDetalhes = (id) => {
+        const url = `https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists/:${id}/tracks`
         const headers = {
             headers: {
                 Authorization: "gabriel-goncalves-maryam"
@@ -16,8 +16,8 @@ class Detalhes extends React.Component {
         }
         axios.get(url, headers)
         .then((response) => {
-            this.setState({detalhes: response})
-            console.log(response)
+            this.setState({detalhesDasListas: response})
+            alert(response)
         })
         .catch((erro) => {
             console.log(erro)
@@ -28,7 +28,7 @@ class Detalhes extends React.Component {
         return (
             <div>
                 Detalhes
-                {/* {this.pegaDetalhes()} */}
+                {this.pegaDetalhes()}
             </div>
         )
     }
