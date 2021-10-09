@@ -8,10 +8,10 @@ function Matches(props) {
 
     useEffect(() => {
         retornaMatches()
-    },[])
+    }, [])
 
     const retornaMatches = () => {
-        const url = "https://us-central1-missao-newton.cloudfunctions.net/astroMatch/daniel/matches"
+        const url = "https://us-central1-missao-newton.cloudfunctions.net/astroMatch/darvas/matches"
         axios.get(url)
         .then((response) => {
             setMatches(response.data.matches)
@@ -21,7 +21,6 @@ function Matches(props) {
         })
     }
 
-    console.log(matches)
     const perfisQueDeramMatch = matches.map((perfil) => {
         return <div key={perfil.id}  className='card'>
             <p>{perfil.name}</p>
