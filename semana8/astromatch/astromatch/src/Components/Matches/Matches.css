@@ -1,0 +1,17 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.card {
+    border: 1px solid black;
+    color: gold;
+    background-color: darkgrey;
+    text-align: center;
+    font: 16px;
+    width:50vw;
+}
+
+.card img{
+    width: 30vw;
+}
