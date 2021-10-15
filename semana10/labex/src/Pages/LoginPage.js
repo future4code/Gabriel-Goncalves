@@ -22,7 +22,9 @@ function LoginPage () {
         setSenha(event.target.value)
     }
 
-    const login = () => {
+    const login = (event) => {
+
+        event.preventDefault()
 
         const url = "https://us-central1-labenu-apis.cloudfunctions.net/labeX/gabriel-goncalves-maryam/login"
 
@@ -42,17 +44,19 @@ function LoginPage () {
 
     return (
         <div>
-            <input 
-            type='text'
-            value={mail}
-            onChange={setaMail}
-            />
-            <input 
-            type='text'
-            value={senha}
-            onChange={setaSenha}
-            />
-            <button onClick={login}>Home Admin</button>
+            <form onSubmit={login}>
+                <input 
+                type='text'
+                value={mail}
+                onChange={setaMail}
+                />
+                <input 
+                type='password'
+                value={senha}
+                onChange={setaSenha}
+                />
+                <button>Home Admin</button>
+            </form>
         </div>
     )
 }
