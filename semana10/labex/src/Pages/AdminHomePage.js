@@ -25,7 +25,6 @@ function AdminHomePage () {
         const url = "https://us-central1-labenu-apis.cloudfunctions.net/labeX/gabriel-goncalves-maryam/trips"
         axios.get(url)
         .then((response) => {
-            console.log(response.data.trips)
             setViagens(response.data.trips)
         }).catch((error) => {
             alert(error.response.data.message)
@@ -36,22 +35,25 @@ function AdminHomePage () {
         history.push("/admin/trips/create")
     }
 
-    const exibeDetalhes = () => {
-        history.push("/admin/trips/:id")
+    const exibeDetalhes = (id) => {
+        history.push(`/admin/trips/${id}`)
     }
 
     const viagensRenderizaveis = viagens.map((viagem) => {
-        return <div key={viagem.id}>
+        return <button 
+                key={viagem.id}
+                onClick={() => exibeDetalhes(viagem.id)}
+                >
             <p>{viagem.name}</p>
             <p>{viagem.planet}</p>
             <p>{viagem.date}</p>
-        </div>
+        </button>
     })
 
     return (
         <div>
             AdminHomePage
-            <button onClick={exibeDetalhes}>Detalhes Viagens</button>
+            {/* <button onClick={exibeDetalhes}>Detalhes Viagens</button> */}
             <button onClick={exibeTelaAdmin}>Criar</button>
             {viagensRenderizaveis}
         </div>

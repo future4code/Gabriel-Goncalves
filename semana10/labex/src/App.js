@@ -11,18 +11,6 @@ import {BrowserRouter, Switch, Route} from 'react-router-dom'
 
 function App() {
 
-  const [viagens, setViagens] = useState([])
-
-  const pegaViagens = () => {
-    const url = "https://us-central1-labenu-apis.cloudfunctions.net/labeX/gabriel-goncalves-maryam/trips"
-    axios.get(url)
-    .then((response) => {
-        setViagens(response.data.trips)
-    }).catch((error) => {
-        alert(error.response.data.message)
-    })
-}
-
   return (
     <BrowserRouter>
       <Switch>
@@ -31,7 +19,7 @@ function App() {
           <AdminHomePage/>
         </Route>
 
-        <Route exact path={"/trips/application"}>
+        <Route exact path={"/trips/application/:id"}>
           <ApplicationFormPage/>
         </Route>
 
@@ -44,9 +32,7 @@ function App() {
         </Route>
 
         <Route exact path={"/trip/list"}>
-          <ListTripsPage
-          viagens={viagens}
-          mostraViagens={pegaViagens}/>
+          <ListTripsPage/>
         </Route>
 
         <Route exact path={"/login"}>

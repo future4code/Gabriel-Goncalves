@@ -5,14 +5,14 @@ import axios from 'axios'
 
 function ListTripsPage () {
 
-    // const [viagens, setViagens] = useState([])
+    const [viagens, setViagens] = useState([])
     const history = useHistory()
 
     useEffect(() => {
-        this.props.mostraViagens
-    },[])
+        pegaViagens()
+    }, [])
 
-    /* const pegaViagens = () => {
+    const pegaViagens = () => {
         const url = "https://us-central1-labenu-apis.cloudfunctions.net/labeX/gabriel-goncalves-maryam/trips"
         axios.get(url)
         .then((response) => {
@@ -20,16 +20,16 @@ function ListTripsPage () {
         }).catch((error) => {
             alert(error.response.data.message)
         })
-    } */
-
-    const exibeInscricao = () => {
-        history.push("/trips/application")
     }
 
-    const viagensRenderizaveis = this.props.viagens.map((viagem) => {
+    const exibeInscricao = (id) => {
+        history.push(`/trips/application/${id}`)
+    }
+
+    const viagensRenderizaveis = viagens.map((viagem) => {
         return <button 
                 key={viagem.id}
-                onClick={() => exibeInscricao()}>
+                onClick={() => exibeInscricao(viagem.id)}>
             <p>{viagem.name}</p>
             <p>{viagem.planet}</p>
             <p>{viagem.date}</p>
@@ -38,7 +38,6 @@ function ListTripsPage () {
 
     return (
         <div>
-            {/* <button onClick={exibeInscricao}>Inscrição</button> */}
             {viagensRenderizaveis}
         </div>
     )

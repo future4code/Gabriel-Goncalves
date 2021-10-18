@@ -9,7 +9,7 @@ function CreateTripPage () {
     const [planeta, setPlaneta] = useState("")
     const [data, setData] = useState("")
     const [descricao, setDescricao] = useState("")
-    const [duracao, setDuracao] = useState()
+    const [duracao, setDuracao] = useState("")
     const history = useHistory()
 
     useEffect(() => {
@@ -42,17 +42,23 @@ function CreateTripPage () {
     }
 
     const criaViagem = () => {
+        const token = localStorage.getItem("token")
         const url = "https://us-central1-labenu-apis.cloudfunctions.net/labeX/gabriel-goncalves-maryam/trips"
+        const headers = {
+            headers: {
+                auth: token
+            }
+        }
         const body = {
             name: nome,
             planet: planeta,
             date: data,
             description: descricao,
-            durationInDays: duracao
+            durationInDays: Number(duracao)
         }
-        axios.post(url, body)
+        axios.post(url, body, headers)
         .then((response) => {
-            console.log(response)
+            alert("Viagem criada!")
         }).catch((error) => {
             console.log(error.response.data.message)
         })
@@ -60,7 +66,6 @@ function CreateTripPage () {
 
     return (
         <div>
-            CreateTripPage
             <input
             value={nome}
             onChange={setaNome}
@@ -70,6 +75,7 @@ function CreateTripPage () {
             onChange={setaPlaneta}
             />
             <input
+            type='date'
             value={data}
             onChange={setaData}
             />
