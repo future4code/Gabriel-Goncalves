@@ -10,6 +10,6 @@ export const exibeCadastro = (history) => {
     history.push('/cadastro')
 }
 
-export const exibePost = (history) => {
-    history.push('/post')
+export const exibePost = (history, id) => {
+    history.push(`/post/${id}`)
 }

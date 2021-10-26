@@ -1,9 +1,10 @@
 import React from 'react'
+import Router from './Rotas/Router';
 
 function App() {
   return (
     <div>
-      Olá Mundo!
+      <Router/>
     </div>
   );
 }
