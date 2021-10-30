@@ -1,7 +1,6 @@
-import React, {useState} from 'react'
+import React from 'react'
 import Router from './Rotas/Router';
-import {useHistory} from 'react-router-dom'
-import {exibeLogin} from "./Rotas/Coordenador"
+import './App.css'
 
 function App() {
 

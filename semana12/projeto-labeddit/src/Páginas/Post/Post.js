@@ -1,8 +1,10 @@
 import React from 'react'
 import { useParams } from 'react-router-dom'
 import usePaginaProtegida from '../../Hooks/usePaginaProtegida'
-import useRequisicao from '../../Hooks/useRequisicao'
-import {URL} from '../../Constantes/URL'
+import {criaComentario} from '../../Requisições/Posts/RequisicoesPosts'
+import useForms from '../../Hooks/useForms'
+import CardPostDetalhado from './CardPostDetalhado'
+import CardComentario from './CardComentario'
 
 const Post = () => {
 
@@ -10,27 +12,36 @@ const Post = () => {
 
     const params = useParams()
 
-    const pegaPost = useRequisicao([], `${URL}/posts/${params.id}/comments`)
-    console.log(params.id)
-    console.log("Detalhe", pegaPost)
+    const [form, manipulaInputs, limpa] = useForms({
+        body: ""
+    })
 
-    const postDetalhado = pegaPost && pegaPost.map((post) => {
-        return <div key={post.createdAt}>
-                    <div>
-                        {post.username}
-                    </div>
-                    <div>
-                        {post.body}
-                    </div>
-                    <div>
-                    <button>L</button> {post.voteSum} <button>D</button>
-                    </div>
-               </div>
-    }) 
+    const enviaForm = (event) => {
+        event.preventDefault()
+        criaComentario(form, params.id)
+    }
+
     return (
         <div>
-            Post page
-            {postDetalhado}
+            <form onSubmit={enviaForm}>
+                <input
+                    name="body"
+                    value={form.body}
+                    onChange={manipulaInputs}
+                    placeholder="escreva seu comentário"
+                    required
+                />
+                <button type="submit">Enviar comentário</button>
+            </form>
+            <hr/>
+            <CardPostDetalhado
+                postId={params.id}
+            />
+            <hr/>
+            <hr/>
+            <CardComentario
+                postId={params.id}
+            />
         </div>
     )
 }

@@ -1,0 +1,26 @@
+.feed-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 8px;
+}
+
+.novo-post {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 3px solid silver;
+    width: 60vw;
+    background-color: gainsboro;
+}
+
+#input-titulo-post {
+    border: 0;
+    border-bottom: 1px solid black;
+    width: 40vw;
+}
+
+#input-corpo-post {
+    width: 50vw;
+    height: 10vh;
+}

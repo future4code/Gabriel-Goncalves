@@ -2,7 +2,7 @@ import React from 'react'
 import { useHistory } from 'react-router'
 import useForms from '../../Hooks/useForms'
 import usePaginaDesprotegida from '../../Hooks/usePaginaDesprotegida'
-import { cadastrar } from '../../Requisições/Posts/Posts'
+import { cadastrar } from '../../Requisições/Posts/RequisicoesPosts'
 
 const Cadastro = () => {
 

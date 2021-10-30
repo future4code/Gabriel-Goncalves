@@ -1,8 +1,9 @@
 import React from 'react'
+import "./Login.css"
 import useForms from '../../Hooks/useForms'
 import { exibeCadastro } from '../../Rotas/Coordenador'
 import { useHistory } from 'react-router-dom'
-import { login } from '../../Requisições/Posts/Posts'
+import { login } from '../../Requisições/Posts/RequisicoesPosts'
 import usePaginaDesprotegida from '../../Hooks/usePaginaDesprotegida'
 
 const Login = () => {
@@ -23,8 +24,8 @@ const Login = () => {
 
     return (
         <div>
-            <div>
-                <form onSubmit={enviaForm}>
+            <div className="login-page">
+                <form className="login-form" onSubmit={enviaForm}>
                     <input
                         name={"email"}
                         value={form.email}
@@ -45,10 +46,8 @@ const Login = () => {
 
                     <button type="submit">Login</button>
                 </form>
+                <button onClick={() => exibeCadastro(history)}>Cadastre-se</button>
             </div>
-
-            <button onClick={() => exibeCadastro(history)}>Cadastre-se</button>
-
         </div>
     )
 }

@@ -1,19 +1,17 @@
 import React from 'react'
+import './EstiloFeed.css'
 import usePaginaProtegida from '../../Hooks/usePaginaProtegida'
-import useRequisicao from '../../Hooks/useRequisicao'
-import {URL} from "../../Constantes/URL"
 import { exibePost } from '../../Rotas/Coordenador'
 import { useHistory } from 'react-router-dom'
-import { criaPost } from '../../Requisições/Posts/Posts'
+import { criaPost } from '../../Requisições/Posts/RequisicoesPosts'
 import useForms from '../../Hooks/useForms'
+import CardPost from './CardPost'
 
 const Feed = () => {
 
     usePaginaProtegida()
 
     const history = useHistory()
-
-    const posts = useRequisicao([], `${URL}/posts`)
 
     const [form, manipulaInputs, limpa] = useForms({
         title: "",
@@ -25,24 +23,11 @@ const Feed = () => {
         criaPost(form, limpa)
     }
 
-    const vaiParaDetalhes = (id) => {
-        exibePost(history, id)
-    }
-
-    const postsRenderizaveis = posts && posts.map((postagem) => {
-        return <div key={postagem.id} onClick={() => vaiParaDetalhes(postagem.id)}>
-            <h4>{postagem.username}</h4>
-            <h5>{postagem.title}</h5>
-            <p>{postagem.body}</p>
-            <hr/>
-        </div>
-    })
-
     return (
-        <div>
-            Feed page
-            <form onSubmit={enviaFormPost}>
+        <div className='feed-page'>
+            <form className="novo-post" onSubmit={enviaFormPost}>
                 <input
+                    id='input-titulo-post'
                     name="title"
                     value={form.title}
                     onChange={manipulaInputs}
@@ -50,6 +35,7 @@ const Feed = () => {
                     required
                 />
                 <input
+                    id='input-corpo-post'
                     name="body"
                     value={form.body}
                     onChange={manipulaInputs}
@@ -58,8 +44,8 @@ const Feed = () => {
                 />
                 <button type="submit">Postar</button>
             </form>
-            {postsRenderizaveis}
-            <button onClick={() => exibePost(history)}>+</button>
+            <CardPost/>
+            {/* <button onClick={() => exibePost(history)}>+</button> */}
         </div>
     )
 }

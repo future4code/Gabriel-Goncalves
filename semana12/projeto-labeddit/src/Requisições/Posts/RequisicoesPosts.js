@@ -44,3 +44,49 @@ export const criaPost = (body, limpa) => {
         console.log(error.response.data)
     })
 }
+
+export const computaVotoComentario = (body, commentId) => {
+    const url = `${URL}/comments/${commentId}/votes`
+    const headers = {
+        headers: {
+            Authorization: localStorage.getItem('token')
+        }
+    }
+    axios.post(url, body, headers)
+    .then((response) => {
+        console.log(response)
+    }).catch((error) => {
+        console.log(error.response)
+    })
+}
+
+export const computaVotoPost = (body, postId) => {
+    const url = `${URL}/posts/${postId}/votes`
+    const headers = {
+        headers: {
+            Authorization: localStorage.getItem('token')
+        }
+    }
+    axios.post(url, body, headers)
+    .then((response) => {
+        console.log(response)
+    }).catch((error) => {
+        console.log(error.response)
+    })
+}
+
+export const criaComentario = (body, postId, limpa) => {
+    const url = `${URL}/posts/${postId}/comments`
+    const headers = {
+        headers: {
+            Authorization: localStorage.getItem('token')
+        }
+    }
+    axios.post(url, body, headers)
+    .then((response) => {
+        console.log(response)
+        limpa()
+    }).catch((error) => {
+        console.log(error.response)
+    })
+}

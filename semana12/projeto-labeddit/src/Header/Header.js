@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import { exibeLogin } from "../Rotas/Coordenador";
-import EstiloHeader from "./EstiloHeader.css"
+import "./EstiloHeader.css"
 import { useHistory } from "react-router-dom";
 
 const Header = () => {
@@ -14,11 +14,11 @@ const Header = () => {
         exibeLogin(history)
     }
 
-    const [botaoLogout, setBotaoLogout] = useState(token ? <button onClick={() => desloga()}>Logout</button> : <p>Faça o login</p>)
+    const [botaoLogout, setBotaoLogout] = useState(token ? <button id="botao-log" onClick={() => desloga()}>Logout</button> : <p>Faça o login</p>)
 
     return (
         <div className="header">
-            <h1>Header</h1>
+            <h1>Labeddit</h1>
             {botaoLogout}
         </div>
     )

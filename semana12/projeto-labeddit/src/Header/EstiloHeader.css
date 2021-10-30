@@ -1,5 +1,26 @@
 .header {
-    border: 1px solid black;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    background-color: orange;
+    color: whitesmoke;
+    height: 80px;
+}
+
+#botao-log {
+    border: 2px solid black;
+    border-radius: 12px;
+    background-color: whitesmoke;
+    height: 50%;
+    width: 8%;
+}
+
+#botao-log:hover {
+    background-color: wheat;
+    color: black;
+    cursor: pointer;
+}
+
+#botao-log:active {
+    color: white;
 }
