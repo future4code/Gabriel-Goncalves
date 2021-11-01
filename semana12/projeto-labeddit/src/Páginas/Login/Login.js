@@ -27,6 +27,7 @@ const Login = () => {
             <div className="login-page">
                 <form className="login-form" onSubmit={enviaForm}>
                     <input
+                        className='login-input'
                         name={"email"}
                         value={form.email}
                         onChange={manipulaInputs}
@@ -36,6 +37,7 @@ const Login = () => {
                     />
 
                     <input
+                        className='login-input'
                         name={"password"}
                         value={form.password}
                         onChange={manipulaInputs}

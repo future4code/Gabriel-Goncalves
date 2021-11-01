@@ -1,7 +1,6 @@
 import React from 'react'
 import './EstiloFeed.css'
 import usePaginaProtegida from '../../Hooks/usePaginaProtegida'
-import { exibePost } from '../../Rotas/Coordenador'
 import { useHistory } from 'react-router-dom'
 import { criaPost } from '../../Requisições/Posts/RequisicoesPosts'
 import useForms from '../../Hooks/useForms'
@@ -45,7 +44,6 @@ const Feed = () => {
                 <button type="submit">Postar</button>
             </form>
             <CardPost/>
-            {/* <button onClick={() => exibePost(history)}>+</button> */}
         </div>
     )
 }

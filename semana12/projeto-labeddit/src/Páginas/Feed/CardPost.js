@@ -6,6 +6,7 @@ import { useHistory } from 'react-router-dom'
 import usePaginaProtegida from '../../Hooks/usePaginaProtegida'
 import { exibePost } from '../../Rotas/Coordenador'
 import { computaVotoPost } from '../../Requisições/Posts/RequisicoesPosts'
+import { deletaVotoPost } from '../../Requisições/Deletes/RequisicoesDelete'
 
 const CardPost = () => {
 
@@ -33,6 +34,10 @@ const CardPost = () => {
         computaVotoPost(body, postId)
     }
 
+    const deletaVotoDoPost = (postId) => {
+        deletaVotoPost(postId)
+    }
+
     const postsRenderizaveis = posts && posts.map((postagem) => {
         return <div className='card' key={postagem.id}>
             <div className='card-user'>
@@ -43,9 +48,15 @@ const CardPost = () => {
             </div>
             <div className='card-interaction'>
                 <div className='card-buttons'>
-                    <button onClick={() => votaPostPositivo(postagem.id)}>L</button>
+                    <button 
+                        id={postagem.userVote === 1 ? "post-com-interacao" : "post-sem-interacao"}
+                        onClick={postagem.userVote === 1 ? () => deletaVotoDoPost(postagem.id) : () => votaPostPositivo(postagem.id)}
+                        >L</button>
                     <p>{postagem.voteSum}</p>
-                    <button onClick={() => votaPostNegativo(postagem.id)}>D</button>
+                    <button
+                        id={postagem.userVote === -1 ? "post-com-interacao" : "post-sem-interacao"} 
+                        onClick={postagem.userVote === -1 ? () => deletaVotoDoPost(postagem.id) : () => votaPostNegativo(postagem.id)}
+                        >D</button>
                 </div>
                 <button id='botao-detalhes' onClick={() => vaiParaDetalhes(postagem.id)}>{postagem.commentCount} Comentários</button>
             </div>

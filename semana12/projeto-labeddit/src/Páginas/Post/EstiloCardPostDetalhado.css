@@ -1,4 +1,4 @@
-.card {
+.card-detalhado {
     background-color: lightyellow;
     display: flex;
     flex-direction: column;
@@ -8,25 +8,25 @@
     width: 85vw;
 }
 
-.card-user {
+.card-user-detalhado {
     border: 1px solid gray;
     text-align: center;
     height: 15%;
     text-align: center;
 }
 
-.card-text {
+.card-text-detalhado {
     border: 1px solid gray;
     height: 70%;
 }
 
-.card-interaction {
+.card-interaction-detalhado {
     border: 1px solid gray;
     display: flex;
     justify-content: space-between;
     height: 15%;
 }
-.card-buttons {
+.card-buttons-detalhado {
     width: 8%;
     margin: 0 4px;
     display: flex;
@@ -35,22 +35,19 @@
     justify-content: space-between;
 }
 
-#botao-detalhes {
-    border: none;
-    background-color: lightyellow;
-    margin: 0 4px;
+#comentarios {
+    margin: 8px 8px;
 }
 
-#botao-detalhes:hover {
-    color: brown;
-    cursor: pointer;
+#detalhado-sem-interacao {
+    background-color: whitesmoke;
 }
 
-#post-com-interacao {
+#detalhado-com-interacao {
     background-color: whitesmoke;
     color: goldenrod;
 }
 
-#post-sem-interacao {
-    background-color: whitesmoke;
+#botao-voltar {
+    margin: 8px 0;
 }

@@ -1,4 +1,5 @@
 import React from 'react'
+import './EstiloCadastro.css'
 import { useHistory } from 'react-router'
 import useForms from '../../Hooks/useForms'
 import usePaginaDesprotegida from '../../Hooks/usePaginaDesprotegida'
@@ -21,10 +22,15 @@ const Cadastro = () => {
         cadastrar(form, history, limpa)
     }
 
+    const voltaLogin = () => {
+        history.push('/')
+    }
+
     return (
-        <div>
-            <form onSubmit={enviaFormCadastro}>
+        <div className='sign-page'>
+            <form className='sign-form' onSubmit={enviaFormCadastro}>
                 <input
+                    className='sign-input'
                     name={"username"}
                     value={form.username}
                     onChange={manipulaInputs}
@@ -33,6 +39,7 @@ const Cadastro = () => {
                 />
 
                 <input
+                    className='sign-input'
                     name={"email"}
                     value={form.email}
                     onChange={manipulaInputs}
@@ -42,6 +49,7 @@ const Cadastro = () => {
                 />
 
                 <input
+                    className='sign-input'
                     name={"password"}
                     value={form.password}
                     onChange={manipulaInputs}
@@ -52,6 +60,7 @@ const Cadastro = () => {
 
                 <button type="submit">Cadastrar</button>
             </form>
+            <button id='voltar-login' onClick={() => voltaLogin()}>Voltar para login</button>
         </div>
     )
 }

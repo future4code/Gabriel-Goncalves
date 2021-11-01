@@ -16,8 +16,6 @@ export const login = (body, history, limpa) => {
 
 export const cadastrar = (body, history, limpa) => {
     const url = `${URL}/users/signup`
-    console.log(URL)
-    console.log(body)
     axios.post(url, body)
     .then((response) => {
         localStorage.setItem('token', response.data.token)

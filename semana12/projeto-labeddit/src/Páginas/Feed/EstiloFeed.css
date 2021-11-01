@@ -18,9 +18,11 @@
     border: 0;
     border-bottom: 1px solid black;
     width: 40vw;
+    margin: 8px 0;
 }
 
 #input-corpo-post {
     width: 50vw;
     height: 10vh;
+    margin: 8px 0;
 }
