@@ -1,0 +1,13 @@
+{
+  "name": "coding-together",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "primeiro": "node exercicio1.js",
+    "segundo": "node exercicio2.js",
+    "terceiro": "node exercicio3.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
