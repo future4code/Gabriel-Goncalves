@@ -11,19 +11,23 @@ export default async function createUser(
             !req.body.name ||
             !req.body.nickname ||
             !req.body.email
-        ) { res.status(400)
-            .send('Preencha os campos "name", "nickname" e "email".') }
+        ) {
+            res.status(400)
+                .send('Preencha os campos "name", "nickname" e "email".')
 
-            const id: string = Date.now() + Math.random().toString()
+            return
+        }
 
-            await insertUser(
-                id,
-                req.body.name,
-                req.body.nickname,
-                req.body.email
-            )
+        const id: string = Date.now() + Math.random().toString()
 
-            res.status(200).send("Usuário criado.")
+        await insertUser(
+            id,
+            req.body.name,
+            req.body.nickname,
+            req.body.email
+        )
+
+        res.status(200).send("Usuário criado.")
 
     } catch (error: any) {
         res.status(400).send({
