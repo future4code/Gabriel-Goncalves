@@ -1,0 +1,53 @@
+.card-detalhado {
+    background-color: lightyellow;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    margin: 12px 16px;
+    height: 220px;
+    width: 85vw;
+}
+
+.card-user-detalhado {
+    border: 1px solid gray;
+    text-align: center;
+    height: 15%;
+    text-align: center;
+}
+
+.card-text-detalhado {
+    border: 1px solid gray;
+    height: 70%;
+}
+
+.card-interaction-detalhado {
+    border: 1px solid gray;
+    display: flex;
+    justify-content: space-between;
+    height: 15%;
+}
+.card-buttons-detalhado {
+    width: 8%;
+    margin: 0 4px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#comentarios {
+    margin: 8px 8px;
+}
+
+#detalhado-sem-interacao {
+    background-color: whitesmoke;
+}
+
+#detalhado-com-interacao {
+    background-color: whitesmoke;
+    color: goldenrod;
+}
+
+#botao-voltar {
+    margin: 8px 0;
+}

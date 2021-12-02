@@ -1,0 +1,45 @@
+.card-comentario {
+    background-color: burlywood;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    margin: 12px 16px;
+    height: 220px;
+    width: 60vw;
+}
+
+.card-user-comentario {
+    border: 1px solid gray;
+    text-align: center;
+    height: 15%;
+    text-align: center;
+}
+
+.card-text-comentario {
+    border: 1px solid gray;
+    height: 70%;
+}
+
+.card-interaction-comentario {
+    border: 1px solid gray;
+    display: flex;
+    justify-content: space-between;
+    height: 15%;
+}
+.card-buttons-comentario {
+    width: 8%;
+    margin: 0 4px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#comment-com-interacao {
+    background-color: whitesmoke;
+    color: goldenrod;
+}
+
+#comment-sem-interacao {
+    background-color: whitesmoke;
+}
