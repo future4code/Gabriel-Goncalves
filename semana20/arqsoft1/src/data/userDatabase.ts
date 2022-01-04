@@ -4,7 +4,7 @@ import { BaseDatabase } from "./baseDatabase";
 export class UserDatabase extends BaseDatabase {
     public async createUser(user: User): Promise<void> {
         try {
-            await BaseDatabase.connection("cookenu_user")
+            await BaseDatabase.connection("User_Arq")
                 .insert({
                     id: user.getId(),
                     name: user.getName(),
@@ -19,7 +19,7 @@ export class UserDatabase extends BaseDatabase {
 
     public async findUserByEmail(email: string): Promise<User> {
         try {
-            const user = await BaseDatabase.connection("cookenu_user")
+            const user = await BaseDatabase.connection("User_Arq")
                 .select("*")
                 .where({ email: email })
             return user[0] && User.toUserModel(user[0])
