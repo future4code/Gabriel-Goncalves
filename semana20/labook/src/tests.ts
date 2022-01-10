@@ -3,6 +3,7 @@ import { DateTreatment } from "./services/dateTreatment";
 import { HashManager } from "./services/hashManager";
 import { IdGenerator } from "./services/idGenerator";
 import {Post} from "./model/posts"
+import { POST_TYPES } from "./model/posts";
 import { PostBusiness } from "./business/postBusiness";
 import { User } from "./model/user";
 
@@ -16,6 +17,3 @@ import { User } from "./model/user";
 // const date = new Date()
 // const test = new DateTreatment().setDateToYYYYMMDDHHMMSS(date)
 // console.log({test})
-
-const test = new User("25", "Chico", "email@email.com", "senha").getId()
-console.log(test)

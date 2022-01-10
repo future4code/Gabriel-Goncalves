@@ -9,10 +9,10 @@ export class HashManager {
         return cypherText
     }
 
-        compareHash = (
-            plainText: string,
-            cypherText: string
-        ) => {
-            return compareSync(plainText, cypherText)
-        }
+    compareHash = (
+        plainText: string,
+        cypherText: string
+    ) => {
+        return compareSync(plainText, cypherText)
+    }
 }
