@@ -1,0 +1,253 @@
+*{
+    margin: 0;
+}
+
+.sortNumber {
+    background-color: #FFFFFF;
+    border-radius: 2cm;
+    display: inline;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 27px;
+}
+
+.lotomaniaSortNumbersContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 23% 23% 23% 23% 8%;
+    justify-items: center;
+    align-items: center;
+    background-color: #ebebeb;
+    width: 70%;
+}
+
+#lotomaniaInfo {
+    grid-area: 5/1/5/6;
+}
+
+#lotomaniaSortNumber1{
+    grid-area: 1/1/2/2;
+}
+
+#lotomaniaSortNumber2{
+    grid-area: 1/2/2/3;
+}
+
+#lotomaniaSortNumber3{
+    grid-area: 1/3/2/4;
+}
+
+#lotomaniaSortNumber4{
+    grid-area: 1/4/2/5;
+}
+
+#lotomaniaSortNumber5{
+    grid-area: 1/5/2/6;
+}
+
+#lotomaniaSortNumber6{
+    grid-area: 2/1/3/2;
+}
+
+#lotomaniaSortNumber7{
+    grid-area: 2/2/3/3;
+}
+
+#lotomaniaSortNumber8{
+    grid-area: 2/3/3/4;
+}
+
+#lotomaniaSortNumber9{
+    grid-area: 2/4/3/5;
+}
+
+#lotomaniaSortNumber10{
+    grid-area: 2/5/3/6;
+}
+
+#lotomaniaSortNumber11{
+    grid-area: 3/1/4/2;
+}
+
+#lotomaniaSortNumber12{
+    grid-area: 3/2/4/3;
+}
+
+#lotomaniaSortNumber13{
+    grid-area: 3/3/4/4;
+}
+
+#lotomaniaSortNumber14{
+    grid-area: 3/4/4/5;
+}
+
+#lotomaniaSortNumber15{
+    grid-area: 3/5/4/6;
+}
+
+#lotomaniaSortNumber16{
+    grid-area: 4/1/5/2;
+}
+
+#lotomaniaSortNumber17{
+    grid-area: 4/2/5/3;
+}
+
+#lotomaniaSortNumber18{
+    grid-area: 4/3/5/4;
+}
+
+#lotomaniaSortNumber19{
+    grid-area: 4/4/5/5;
+}
+
+#lotomaniaSortNumber20{
+    grid-area: 4/5/5/6;
+}
+
+#lotomaniaSideContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #FFAB64;
+    color: #FFFFFF;
+    font-family: 'Montserrat', sans-serif;
+    width: 30%;
+}
+
+#logo {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+#concurso {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+
+#sortitionDate {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#lotomaniaPage {
+    display: flex;
+    height: 100vh;
+}
+
+@media only screen and (max-width: 600px) {
+    #lotomaniaPage {
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+    }
+
+    #lotomaniaSideContent {
+        width: 100%;
+        height: 50%;
+    }
+
+    .lotomaniaSortNumbersContainer {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 23% 23% 23% 23% 8%;
+        justify-items: center;
+        align-items: center;
+        background-color: #ebebeb;
+        width: 100%;
+        height: 50%;
+        text-align: center;
+    }
+
+    #lotomaniaInfo {
+        grid-area: 5/1/5/6;
+    }
+    
+    #lotomaniaSortNumber1{
+        grid-area: 1/1/2/2;
+    }
+    
+    #lotomaniaSortNumber2{
+        grid-area: 1/2/2/3;
+    }
+    
+    #lotomaniaSortNumber3{
+        grid-area: 1/3/2/4;
+    }
+    
+    #lotomaniaSortNumber4{
+        grid-area: 1/4/2/5;
+    }
+    
+    #lotomaniaSortNumber5{
+        grid-area: 1/5/2/6;
+    }
+    
+    #lotomaniaSortNumber6{
+        grid-area: 2/1/3/2;
+    }
+
+    #lotomaniaSortNumber7{
+        grid-area: 2/2/3/3;
+    }
+
+    #lotomaniaSortNumber8{
+        grid-area: 2/3/3/4;
+    }
+
+    #lotomaniaSortNumber9{
+        grid-area: 2/4/3/5;
+    }
+
+    #lotomaniaSortNumber10{
+        grid-area: 2/5/3/6;
+    }
+
+    #lotomaniaSortNumber11{
+        grid-area: 3/1/4/2;
+    }
+    
+    #lotomaniaSortNumber12{
+        grid-area: 3/2/4/3;
+    }
+
+    #lotomaniaSortNumber13{
+        grid-area: 3/3/4/4;
+    }
+
+    #lotomaniaSortNumber14{
+        grid-area: 3/4/4/5;
+    }
+
+    #lotomaniaSortNumber15{
+        grid-area: 3/5/4/6;
+    }
+
+    #lotomaniaSortNumber16{
+        grid-area: 4/1/5/2;
+    }
+    
+    #lotomaniaSortNumber17{
+        grid-area: 4/2/5/3;
+    }
+    
+    #lotomaniaSortNumber18{
+        grid-area: 4/3/5/4;
+    }
+    
+    #lotomaniaSortNumber19{
+        grid-area: 4/4/5/5;
+    }
+    
+    #lotomaniaSortNumber20{
+        grid-area: 4/5/5/6;
+    }
+}
