@@ -1,0 +1,131 @@
+*{
+    margin: 0;
+}
+
+.sortNumber {
+    background-color: #FFFFFF;
+    border-radius: 2cm;
+    display: inline;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 27px;
+}
+
+.quinaSortNumbersContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 90% 10%;
+    justify-items: center;
+    align-items: center;
+    background-color: #ebebeb;
+    width: 70%;
+}
+
+#quinaInfo {
+    grid-area: 2/1/3/6;
+}
+
+#quinaSortNumber1{
+    grid-area: 1/1/2/2;
+}
+
+#quinaSortNumber2{
+    grid-area: 1/2/2/3;
+}
+
+#quinaSortNumber3{
+    grid-area: 1/3/2/4;
+}
+
+#quinaSortNumber4{
+    grid-area: 1/4/2/5;
+}
+
+#quinaSortNumber5{
+    grid-area: 1/5/2/6;
+}
+
+#quinaSideContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #8666EF;
+    color: #FFFFFF;
+    font-family: 'Montserrat', sans-serif;
+    width: 30%;
+}
+
+#logo {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+#concurso {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+
+#sortitionDate {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#quinaPage {
+    display: flex;
+    height: 100vh;
+}
+
+@media only screen and (max-width: 600px) {
+    #quinaPage {
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+    }
+
+    #quinaSideContent {
+        width: 100%;
+        height: 50%;
+    }
+
+    .quinaSortNumbersContainer {
+        width: 100%;
+        height: 50%;
+        display: grid;
+        justify-items: center;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 30% 30% 40%;
+    }
+
+    #quinaSortNumber1 {
+        grid-area: 1/1/2/2;
+    }
+
+    #quinaSortNumber2 {
+        grid-area: 1/3/2/4;
+    }
+
+    #quinaSortNumber3 {
+        grid-area: 1/5/2/6;
+    }
+
+    #quinaSortNumber4 {
+        grid-area: 2/2/3/3;
+    }
+
+    #quinaSortNumber5 {
+        grid-area: 2/4/3/5;
+    }
+
+    #quinaInfo {
+        grid-area: 3/1/4/6;
+        text-align: center;
+    }
+}
