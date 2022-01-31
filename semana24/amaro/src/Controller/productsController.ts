@@ -28,9 +28,8 @@ export class ProductsController {
         try {
 
             const { name, tags } = req.body
-            const tagsToDB: string = JSON.stringify(tags)
             
-            await new ProductsBuisiness().createProduct(name, tagsToDB)
+            await new ProductsBuisiness().createProduct(name, tags)
 
             res.status(200).send("Produto criado")
         } catch (error: any) {

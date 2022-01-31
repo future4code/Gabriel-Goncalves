@@ -13,9 +13,9 @@ export class ProductsDatabase extends BaseDatabase {
             .select(`${this.tableNames.tags}.tags`)
             .from(this.tableNames.products)
             .leftJoin(this.tableNames.tags, "products.id", "tags.product_id")
-            .where({ "products.id": query })
+            .whereLike("tags.tags", `%${query}%`)
+            .orWhere({ "products.id": query })
             .orWhere({ "products.name": query })
-            .orWhere({ "tags": query })
 
         return result
     }
