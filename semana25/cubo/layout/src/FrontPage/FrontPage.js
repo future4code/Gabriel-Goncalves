@@ -1,21 +1,19 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useState, useEffect } from "react";
 import { URL } from "../BASE-URL/BASE-URL"
 import axios from "axios"
 import Header from "../Components/Header/Header";
 import Table from "../Components/Table/Table";
-import GlobalStateContext from "../Global/GlobalStateContext";
 import "./FrontPage.css"
 import Donut from "../Components/Donut/Donut";
 
 const FrontPage = () => {
 
     const [investors, setInvestors] = useState()
-    const { render } = useContext(GlobalStateContext)
 
     useEffect(() => {
         getInvestors()
-    }, [render])
-    console.log(render)
+    }, [])
+    
     const getInvestors = () => {
         axios.get(`${URL}/investors/all`)
             .then((response) => {

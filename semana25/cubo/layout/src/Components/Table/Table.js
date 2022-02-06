@@ -1,4 +1,4 @@
-import React, {useEffect} from "react";
+import React from "react";
 import "./Table.css"
 
 const Table = (props) => {
@@ -15,7 +15,7 @@ const Table = (props) => {
                     </tr>
                 </thead>
                 <tbody>
-                    {props.tableInfo}
+                    {props && props.tableInfo}
                 </tbody>
             </table>
         </div>

@@ -1,9 +1,7 @@
-import React, { useContext } from "react";
+import React from "react";
 import useForms from "../../Hooks/useForms";
 import { createInvestor } from "../../REST/POST/postReqs";
-import GlobalStateContext from "../../Global/GlobalStateContext";
 import "./Header.css"
-// #04bbe2
 
 const Header = () => {
 
@@ -13,16 +11,9 @@ const Header = () => {
         participation: ""
     })
 
-    const { render, setRender } = useContext(GlobalStateContext)
-
     const enviaForm = (event) => {
-        event.preventDefault()
-        // createInvestor(form, clear)
-        callSetRender()
-    }
-
-    const callSetRender = () => {
-        setRender(!render)
+        // event.preventDefault()
+        createInvestor(form, clear)
     }
 
     return (

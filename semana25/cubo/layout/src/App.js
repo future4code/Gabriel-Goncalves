@@ -1,11 +1,10 @@
 import FrontPage from "./FrontPage/FrontPage";
-import GlobalState from "./Global/GlobalState";
 
 function App() {
   return (
-    <GlobalState>
+    <div>
       <FrontPage />
-    </GlobalState>
+    </div>
   );
 }
 
