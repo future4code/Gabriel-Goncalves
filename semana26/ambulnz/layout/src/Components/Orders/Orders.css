@@ -1,0 +1,13 @@
+#detailPage{
+    background-color: whitesmoke;
+    height: 100%;
+    width: 15vw;
+    border-radius: 8px;
+    opacity: 0;
+    /* z-index: 1; */
+    transition: opacity 1s, transform 1s;
+}
+
+#ordersCard {
+    text-align: center;
+}
