@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+}
+
+.headerContainer {
+    background-color: #04bbe2;
+    height: 15vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    grid-area: 1/1/2/3;
+}
+
+.headerInput {
+    margin: 0 8px;
+    height: 5vh;
+    width: 18vw;
+}
+
+.headerButton {
+    background-color: #04bbe2;
+    color: white;
+    border: 2px solid white;
+    height: 5vh;
+    width: 7vw;
+}
