@@ -35,8 +35,8 @@ const PizzaCard = (props) => {
     })
 
     const showDetails = () => {
-        document.getElementById("detailPage").style.opacity = 1
-        document.getElementById("detailPage").style.transform = "translate(0, -50px)"
+        document.getElementById("ordersComponent").style.opacity = 1
+        document.getElementById("ordersComponent").style.transform = "translate(0, -50px)"
     }
 
     return(

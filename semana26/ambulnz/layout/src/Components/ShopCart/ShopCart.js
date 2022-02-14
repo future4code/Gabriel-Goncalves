@@ -10,8 +10,6 @@ const ShopCart = (props) => {
         return { pizza: item.name, quantity: item.quantity }
     })
 
-    console.log(orders)
-
     const findOrder = (pizza) => {
         const index = orders.findIndex((item) => {
             return item.pizza === pizza.name
@@ -46,7 +44,7 @@ const ShopCart = (props) => {
             newCart[position].quantity -= 1
 
         }
-
+        
         props.setCart(newCart)
     }
 

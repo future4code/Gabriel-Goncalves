@@ -1,10 +1,10 @@
-#detailPage{
+#ordersComponent{
     background-color: whitesmoke;
-    height: 100%;
     width: 15vw;
     border-radius: 8px;
     opacity: 0;
-    /* z-index: 1; */
+    position: fixed;
+    bottom: -42px;
     transition: opacity 1s, transform 1s;
 }
 

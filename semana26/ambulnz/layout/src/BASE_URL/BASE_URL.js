@@ -1,1 +1,1 @@
-export const URL = 'http://localhost:3003'
+export const URL = 'https://caseamulnz.herokuapp.com'

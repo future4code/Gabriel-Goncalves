@@ -16,7 +16,7 @@ const Orders = (props) => {
     </div>
 
     return (
-        <div id="detailPage">
+        <div id="ordersComponent">
             {cart.length !== 0 ? ordersNumber : null}
         </div>
     )

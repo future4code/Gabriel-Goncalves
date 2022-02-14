@@ -5,8 +5,12 @@
   "main": "index.js",
   "scripts": {
     "dev": "ts-node-dev ./src/index.ts",
-    "start": "tsc && node ./build/index.js",
-    "test": "tsc && node ./build/tests.js"
+    "start": "node --inspect ./build/index.js",
+    "test": "tsc && node ./build/tests.js",
+    "postinstall": "tsc"
+  },
+  "engines": {
+    "node": "v14.17.4"
   },
   "author": "",
   "license": "ISC",
@@ -14,6 +18,7 @@
     "cors": "^2.8.5",
     "dotenv": "^16.0.0",
     "express": "^4.17.2",
+    "heroku": "^7.59.2",
     "knex": "^1.0.2",
     "mysql": "^2.18.1",
     "uuid": "^8.3.2"

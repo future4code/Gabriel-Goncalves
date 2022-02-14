@@ -12,6 +12,6 @@ app.use(cors())
 app.use("/api", pizzasRouter)
 app.use("/api", ordersRouter)
 
-app.listen(3003, () => {
+app.listen(process.env.PORT || 3003, () => {
     console.log("Ready")
 })

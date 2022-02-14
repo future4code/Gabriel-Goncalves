@@ -46,7 +46,6 @@ export class OrdersController {
         try {
 
             const { pizza, quantity } = req.body
-            // console.log(pizza, quantity)
 
             await new OrdersBuisiness().makeOrder(pizza, quantity)
 
